@@ -23,6 +23,18 @@ void forward(float rotation)
 	}
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+void accelerate(float speed)
+{
+for(int i=0; i<speed; i++)
+{
+	motor[rightMotor] = i;
+	motor[leftMotor] =i;
+}
+	while(true){
+		motor[rightMotor] = speed;
+		motor[leftMotor] = speed;
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void backward(float rotation)
 {
 	SensorValue[leftEncoder] = 0;
