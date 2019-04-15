@@ -191,7 +191,7 @@ void pointTurnLeft(int degree)
 void encoderTurnLeft(int degree)
 {
 	resetEncoder();
-	while(SensorValue[leftEncoder] > degree * -360){
+	while(SensorValue[leftEncoder] > degree * -10){
 		motor[leftMotor] = -63;
 		motor[rightMotor] = 63;
 	}
