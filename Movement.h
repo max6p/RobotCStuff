@@ -13,6 +13,29 @@ void resetEncoder()
 	SensorValue[leftEncoder] = 0;SensorValue[rightEncoder] = 0;
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+void avoid();
+{
+	while(sonarSensor > 3) && while(lineFollower /* value */) && while(touchSensor == 0)
+	{
+		constantForward();		
+	}	
+	
+	while(sonarSensor < 3)
+	{
+		
+	}
+	
+	while(lineFollower /*value*/)
+	{
+		
+	}
+		
+	while(touchSensor == 0)
+	{
+		
+	}
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void forward(float rotation)
 {
 	resetEncoder();
