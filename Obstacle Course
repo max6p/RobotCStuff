@@ -5,5 +5,5 @@
 #include<Movement.h>
 task main()
 {
-
+  avoid();
 }
