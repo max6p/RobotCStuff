@@ -5,8 +5,5 @@
 #include<Movement.h>
 task main()
 {
-	while(sonarSensor > 3) && while(lineFollower /* value */) && while(touchSensor == 0)
-	{
-			
-	}
+
 }
