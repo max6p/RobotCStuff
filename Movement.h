@@ -15,24 +15,35 @@ void resetEncoder()
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void avoid();
 {
-	while(sonarSensor > 3) && while(lineFollower /* value */) && while(touchSensor == 0)
+	while(sonarSensor > 3) && while(lineFollower < 2000) && while(touchSensor == 0)
 	{
 		constantForward();		
 	}	
 	
-	while(sonarSensor < 3)
+	if(sonarSensor < 2)
 	{
-		
+		stopMotors();
+		while(sonarSensor < 2)
+		{
+		motor[rightMotor] = -60;
+		motor[leftMotor] = 60;
+		}
+		stopMotors();
 	}
-	
-	while(lineFollower /*value*/)
+	if(lineFollower > 2000)
 	{
-		
+		stopMotors();
+		backward(.5);
+		motor[rightMotor] = -60;
+		motor[leftMotor] = 60;
+		encoderTurnRight(90);
 	}
 		
-	while(touchSensor == 0)
+	while(touchSensor == 1)
 	{
-		
+		stopMotors();
+		backward(.5);
+		encoderTurnRight(90);
 	}
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
