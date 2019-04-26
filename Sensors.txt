@@ -1,0 +1,2 @@
+Sonar Sensors x2
+Line Follower x1
